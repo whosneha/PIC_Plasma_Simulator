@@ -1,5 +1,10 @@
 # Exploring Plasma Simulations Using the Particle in Cell Method in 1D and 2D
 
+### Schematic Representation
+
+Below is a conceptual schematic of the simulation setup (source: https://boltzplatz.eu/intro-particle-in-cell/):
+![FlowChart](scheme.jpg)
+
 # 1D Particle-in-Cell Simulation for Two-Stream Instability 
 
 ## Introduction
