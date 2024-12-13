@@ -78,7 +78,7 @@ To run this simulation, you need:
 1. **Clone the Repository**:
    - If you have Git installed, open the Command Prompt or Terminal and type:
      ```
-     git clone https://github.com/yourusername/PIC_Plasma_Simulator.git
+     git clone https://github.com/whosneha/PIC_Plasma_Simulator.git
      ```
    - Replace `yourusername` with your GitHub username.
 
