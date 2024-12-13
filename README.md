@@ -73,7 +73,7 @@ To run this simulation, you need:
 1. **Clone the Repository**:
    - If you have Git installed, open the Command Prompt or Terminal and type:
      ```
-     git clone https://github.com/yourusername/two-stream-instability-pic.git
+     git clone https://github.com/yourusername/PIC_Plasma_Simulator.git
      ```
    - Replace `yourusername` with your GitHub username.
 
@@ -163,6 +163,34 @@ run_simulation_1d(
 
 ```
 
+### Example 2: Checking out the Electric Field
+
+Run the simulation to see the electric field over time instead of the phase space diagram and maybe use the gaussian perturbation function. 
+
+```python
+run_simulation_1d(
+    method="leapfrog",
+    perturbation_type="gaussian",
+    save_gif=True,gif_name = "efield.gif"
+    visualization_mode="Electric Field"
+)
+
+```
+
+### Example 2: Checking out the Charge Density
+
+Run the simulation to see the charge density over time instead of the phase space diagram and maybe use the random noise perturbation function. 
+
+```python
+run_simulation_1d(
+    method="runge_kutta",
+    perturbation_type="random_noise",
+    save_gif=True,gif_name = "rho.gif"
+    visualization_mode="Charge Density"
+)
+
+```
+
 
 # 2D Particle-in-Cell Simulation for Two-Stream Instability
 
@@ -225,16 +253,17 @@ Welcome to the **2D Particle-In-Cell (PIC) Simulation**! This code is designed t
 ---
 
 ## **How to Use**
-1. **Set Parameters**: Adjust domain size, particle count, and simulation time steps in the `run_simulation_2d()` function.
-2. **Choose a Method**:
+1. **Set Parameters**: Adjust domain size, particle count, and simulation time steps in the `run_simulation_2d()` function. See the asteriked lines for more details about potential
+   run options. Don't forget to run the command!
+3. **Choose a Method**:
    - `"block"` for particle block injection.
    - `"front"` for shock simulation.
-3. **Select Integration Method**:
+4. **Select Integration Method**:
    - `"leapfrog"` for faster but slightly less accurate integration.
    - `"runge_kutta"` for higher accuracy.
-4. **Pick Boundary Type**:
+5. **Pick Boundary Type**:
    - `"periodic"`, `"sticky"`, or `"reflective"`.
-5. **Run the Simulation**: Call the `run_simulation_2d()` function with the chosen options.
+6. **Run the Simulation**: Call the `run_simulation_2d()` function with the chosen options.
 
 ---
 
@@ -248,7 +277,16 @@ run_simulation_2d(
     method="block",
     integration_method="leapfrog",
     boundary_type="periodic",
-    gif_name="block_injection_leapfrog.gif"
+    gif_name="block_injection_leapfrog_periodic.gif"
+)
+```
+Run the simulation by injecting a shock front of particles and using the Runge Kutta integrator with sticky boundary conditions.
+```python
+run_simulation_2d(
+    method="front",
+    integration_method="runge_kutta",
+    boundary_type="sticky",
+    gif_name="front_injection_runge_kutta_sticky.gif"
 )
 ```
 
