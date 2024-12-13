@@ -161,6 +161,8 @@ run_simulation_1d(
     visualization_mode="Phase Space"
 )
 
+```
+
 
 # 2D Particle-in-Cell Simulation for Two-Stream Instability
 
