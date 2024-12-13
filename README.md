@@ -73,7 +73,7 @@ To run this simulation, you need:
      pip install numpy scipy matplotlib imageio
      ```
 
-### Downloading the Project
+### Downloading the Project (I would prefer if you download as a ZIP file, Git can be confusing)
 
 1. **Clone the Repository**:
    - If you have Git installed, open the Command Prompt or Terminal and type:
